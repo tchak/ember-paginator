@@ -39,14 +39,9 @@ export default ArrayProxy.extend({
     @private
   */
   loadFirstPage() {
-    this.get('_model').then((model) => {
-      let content = model.toArray().slice(0, this.pageSize);
-
-      this.set('content', content);
-
-      if (this.cache) {
-        this.cache[1] = resolve(content);
-      }
+    this.loadPage(1, (model) => {
+      let page = model.toArray().slice(0, this.pageSize);
+      return resolve(page);
     });
   },
 
