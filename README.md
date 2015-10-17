@@ -1,6 +1,8 @@
-# Ember-paginator
+# EmberPaginator
 
-This README outlines the details of collaborating on this Ember addon.
+/!\ WIP /!\
+
+POC of Ember Paginator interface.
 
 ## Installation
 
